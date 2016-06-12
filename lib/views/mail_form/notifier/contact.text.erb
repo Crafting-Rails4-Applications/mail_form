@@ -1,0 +1,4 @@
+<%= message.subject %>
+<% @contact.attribute_names.each do |key| -%>
+	<%= @contact.class.human_attribute_name(key) %>: <%= @contact.send(key) %>
+<% end -%>
