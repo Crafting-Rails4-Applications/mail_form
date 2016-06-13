@@ -1,3 +1,14 @@
 = MailForm
 
+Summary:
+
+This chapter shows us how to create a non-active record model, perhaps for use for another ORM, from scratch using ActiveModel so we can include what we need/want in our controllers and views. We also get to see what methods and properties are required in a model for it to act as an active record model.
+
+Notes:
+
+1. attr_accessor(*some_array): passing an array with the splats argument deconstructs the array into method params. Was only aware of using the splats argument to construct arrays
+2. autoload :Base, 'mail_form/base': autoloading lets us lazyload a constant until it is first referenced. The alternative is to use 'require'
+3. Included/extended ActiveModel::AttributeMethods, Conversion, Naming, Validations in our model. These modules provide methods that active record looks for
+4. Use ActiveModel::Model to pass all tests in ActiveModel::Lint::Tests
+
 This project rocks and uses MIT-LICENSE.
